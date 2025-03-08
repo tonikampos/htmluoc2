@@ -1,30 +1,62 @@
-/**
- * Use this file to import partials.
- * Do not include SCSS code in this file.
- */
-
-/**
- * Import variables
- */
-
+@import "../../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 @import "variables";
+@import "functions";
+@import "../../../node_modules/aos/dist/aos.css";
+@import "home";
+@import "header";
+@import "sections";
+@import "gallery";
+@import "footer";
 
-/**
- * Import npm dependencies
- * see: https://v2.parceljs.org/features/module-resolution/
- * see commented examples below
- */
- @import "npm:@fortawesome/fontawesome-free/css/all.css";
-// @import "some-node-module";
-// @import "@some-company/some-node-module";
 
-/**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-@import "layouts/home";
+html {
+  font-size: 16px;
+}
 
-/**
- * Do NOT include anything else in this file!
- */
+body {
+  background-color: $color-bg;
+  color: $color-text;
+  font-family: $font-primary;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  color: $color-accent;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 1rem;
+
+  @media (min-width: $bp-tablet) {
+    max-width: 700px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    max-width: 1200px;
+  }
+}
+
+
